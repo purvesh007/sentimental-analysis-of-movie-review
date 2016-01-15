@@ -1,0 +1,12 @@
+library(e1071)
+
+classifier <- naiveBayes(sentiment~ vNeg+neg+pos+vPos ,data = train1)
+nb_p <- predict(as.factor(results$sentiment)~., data = test)
+confTable <- table(predict(classifier, results), results[,6], dnn=list('predicted','actual'))
+confTable
+
+accuracy_nb <-sum(results$sentiment==confTable)/length(confTable)
+
+#running binomail test on data
+binom.test(confTable[1,1] + confTable[2,2], nrow(results), p=0.5)
+

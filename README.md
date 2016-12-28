@@ -6,4 +6,4 @@ Initial step in this project is pre-processing i.e. cleaning of data, removing n
 
 I have runed many Machine algorithm on my model like naive Bayes, SVM, Randon Forest, K-nearest for getting output and to check Accuracy of my model.
 
-All pre-processing anf feature slection code is in main file
+All pre-processing and feature selction code is in main file
